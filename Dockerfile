@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM adoptopenjdk:8-jdk-hotspot
 
 
 USER root
