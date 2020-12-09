@@ -11,7 +11,6 @@ Provides Docker multi-nodes Hadoop cluster with Spark 2.4.1 on Yarn.
 * [Usage](#usage)
 	* [Build](#build)
 	* [Run](#run)
-	* [Stop](#stop)
 	* [Connect to Master Node](#connect-to-master-node)
 	* [Run spark applications on cluster :](#run-spark-applications-on-cluster-)
 		* [spark-shell](#spark-shell)
@@ -27,10 +26,6 @@ make build
 ### Run 
 ```bash
 make start
-```
-### Stop
-```bash
-make stop
 ```
 ### Connect to Master Node
 ```bash

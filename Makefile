@@ -9,10 +9,6 @@ start :
 	@echo " ---- START ---- "
 	@chmod +x startHadoopCluster.sh
 	@./startHadoopCluster.sh
-stop :
-	@echo " ---- STOP ---- "
-	@chmod +x stop.sh
-	@./stop.sh
 
 connect :
 	@echo " ---- MASTER NODE ---- "

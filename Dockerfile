@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 
 
 USER root
@@ -12,14 +12,14 @@ ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 RUN ssh-keygen -t rsa -f $HOME/.ssh/id_rsa -P "" \
     && cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 
-RUN wget -O /hadoop.tar.gz -q http://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.7.3.tar.gz \
+RUN wget -O /hadoop.tar.gz -q http://archive.apache.org/dist/hadoop/core/hadoop-3.2.1/hadoop-3.2.1.tar.gz \
         && tar xfz hadoop.tar.gz \
-        && mv /hadoop-2.7.3 /usr/local/hadoop \
+        && mv /hadoop-3.2.1 /usr/local/hadoop \
         && rm /hadoop.tar.gz
 
-RUN wget -O /spark.tar.gz -q https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz
+RUN wget -O /spark.tar.gz -q https://archive.apache.org/dist/spark/spark-3.0.1/spark-3.0.1-bin-hadoop3.2.tgz
 RUN tar xfz spark.tar.gz
-RUN mv /spark-2.4.1-bin-hadoop2.7 /usr/local/spark
+RUN mv /spark-3.0.1-bin-hadoop3.2 /usr/local/spark
 RUN rm /spark.tar.gz
 
 
